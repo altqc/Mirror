@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "mirror",
+  "name": "Mirror Client Base",
+  "description": "Free, open source Minecraft forge ghost client base.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/Trapss/Mirror",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["iTrqPss / Haruhime"],
+  "credits": "Forge and FML Team, Arikia for the RPC Library",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
