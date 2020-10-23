@@ -4,15 +4,12 @@ import me.haruhime.Mirror;
 import me.haruhime.management.ModuleManager;
 import me.haruhime.modules.Module;
 import me.haruhime.utils.ColourUtils;
-import me.haruhime.utils.RenderUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.input.Keyboard;
 
-import java.awt.*;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -70,7 +67,7 @@ public class HUD extends Module {
 
     }
 
-    public static void setDrawingHUD(Boolean bool){
+    public static void setDrawingHUD(Boolean bool) {
         HUD.drawingHUD = false;
 
     }

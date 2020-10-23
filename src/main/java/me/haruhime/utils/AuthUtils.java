@@ -1,14 +1,17 @@
 package me.haruhime.utils;
 
-import java.io.*;
-import java.security.*;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class AuthUtils {
 
     // This will generate a HWID that should work across multiple os platforms
 
     public static String getHWID() throws IOException {
-        String HWIDraw = String.valueOf(System.getenv("PROCESSOR_IDENTIFIER")) + System.getenv("COMPUTERNAME") + System.getProperty("user.name");
+        String HWIDraw = System.getenv("PROCESSOR_IDENTIFIER") + System.getenv("COMPUTERNAME") + System.getProperty("user.name");
         return HWIDraw;
     }
 
@@ -18,14 +21,12 @@ public class AuthUtils {
         String digest = null;
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] hash = md.digest(message.getBytes("UTF-8"));
+            byte[] hash = md.digest(message.getBytes(StandardCharsets.UTF_8));
             StringBuilder sb = new StringBuilder(2 * hash.length);
-            for (byte b: hash) {
+            for (byte b : hash) {
                 sb.append(String.format("%02x", b & 0xff));
             }
             digest = sb.toString();
-        } catch (UnsupportedEncodingException ex) {
-
         } catch (NoSuchAlgorithmException ex) {
 
         }

@@ -10,6 +10,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ModuleManager {
 
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
+
     public static CopyOnWriteArrayList<Module> getModules() {
         return ModuleManager.modules;
     }

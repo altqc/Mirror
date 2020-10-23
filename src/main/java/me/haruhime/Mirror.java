@@ -31,12 +31,47 @@ public class Mirror {
     private static final Boolean discordRPCOnStartup = true, discordRPCEnabled = true;
     // The client
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
-
+    private static final Wrapper wrapper = new Wrapper();
     // CLient Stuff
     double c = 0;
-    private static Wrapper wrapper = new Wrapper();
 
     // Initialization of the forge mod (client hook)
+
+    public static String getClientName() {
+        return clientName;
+    }
+
+    // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
+
+    public static void setClientName(String str) {
+        Mirror.clientName = str;
+    }
+
+    public static String getClientVersion() {
+        return clientVersion;
+    }
+
+    public static void setClientVersion(String str) {
+        Mirror.clientVersion = str;
+    }
+
+    public static String getClientAuthor() {
+        return clientAuthor;
+    }
+
+    public static void setClientAuthor(String str) {
+        Mirror.clientAuthor = str;
+    }
+
+    public static String getDiscordAppID() {
+        return discordAppID;
+    }
+
+    // Getters and Setters for modular and dynamic client information
+
+    public static void setDiscordAppID(String str) {
+        Mirror.discordAppID = discordAppID;
+    }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -51,8 +86,6 @@ public class Mirror {
         Minecraft.getMinecraft().gameSettings.gammaSetting = 0;
         Minecraft.getMinecraft().gameSettings.guiScale = 2;
     }
-
-    // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {
@@ -69,7 +102,7 @@ public class Mirror {
     }
 
     @SubscribeEvent
-    public void onClickInput(InputEvent.MouseInputEvent event){
+    public void onClickInput(InputEvent.MouseInputEvent event) {
         if (!Mouse.getEventButtonState()) {
             return;
         }
@@ -107,46 +140,12 @@ public class Mirror {
         if (Minecraft.getMinecraft().currentScreen instanceof GuiMainMenu) {
             if (discordRPCEnabled)
                 DiscordRPCManager.clientInMenus();
-            if(HUD.drawingHUD)
+            if (HUD.drawingHUD)
                 HUD.setDrawingHUD(false);
-        } else if(Minecraft.getMinecraft().currentScreen instanceof GuiDisconnected) {
+        } else if (Minecraft.getMinecraft().currentScreen instanceof GuiDisconnected) {
             if (HUD.drawingHUD)
                 HUD.setDrawingHUD(false);
         }
-    }
-
-    // Getters and Setters for modular and dynamic client information
-
-    public static String getClientName() {
-        return clientName;
-    }
-
-    public static void setClientName(String str) {
-        Mirror.clientName = str;
-    }
-
-    public static String getClientVersion() {
-        return clientVersion;
-    }
-
-    public static void setClientVersion(String str) {
-        Mirror.clientVersion = str;
-    }
-
-    public static String getClientAuthor() {
-        return clientAuthor;
-    }
-
-    public static void setClientAuthor(String str) {
-        Mirror.clientAuthor = str;
-    }
-
-    public static String getDiscordAppID() {
-        return discordAppID;
-    }
-
-    public static void setDiscordAppID(String str) {
-        Mirror.discordAppID = discordAppID;
     }
 
 }
