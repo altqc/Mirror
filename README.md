@@ -39,7 +39,7 @@ The provided utils are basic HWID to MD5 hash getters.
 A guide on setting up your own auth server will be written in the future.  
   
 ## Contributing  
-All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 atm).  
+All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 & me.haruhime.utils.ColorUtils atm).  
 If looking to contribute to this project dm me  [iTrqPss#8258](http://discordapp.com/users/359833743906832385)  
 If you do not dm me first, I will deny all forks.  
   
