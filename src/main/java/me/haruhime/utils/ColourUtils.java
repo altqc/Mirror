@@ -4,6 +4,7 @@ import java.awt.*;
 
 public class ColourUtils {
 
+    // astolfo theme
     // provided by josephwarks
 
     public static Color astolfo(int index, int speed, float saturation, float brightness, float opacity) {
@@ -16,6 +17,7 @@ public class ColourUtils {
         return new Color(obj.getRed(), obj.getGreen(), obj.getBlue(), Math.max(0, Math.min(255, (int) (opacity * 255))));
     }
 
+    // basic rgb chroma, skeet theme
     // provided by josephworks
 
     public static Color rainbow(int index, double speed) {
