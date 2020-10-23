@@ -51,7 +51,7 @@ A list of dependancies will be present later on.
 ## Authentication Utils   
 The project will include authentication utils but not methods to use them, you must write these yourself.  
 The provided utils are basic HWID to MD5 hash getters.  
-A guide on setting up your own auth server will be written in the future.  
+A basic concept guide written by me may be viewed [here](https://gist.github.com/Trapss/962c3989d362d07a2cefc57de128ac04).  
   
 ## Contributing  
 All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 & me.haruhime.utils.ColorUtils atm).  
