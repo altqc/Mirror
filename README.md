@@ -11,3 +11,6 @@ Many features will be able to be changed and customized in me.haruhime.Mirror
 Mirror is fully modular and you can change it however you like!  
 Most cusomization options can even be fully disabled for a minimalist client.  
 Things such as Discord RPC have several presets but you can also always make your own.
+
+## Dependancies  
+While you may edit the build.gradle, the one provided has needed dependancies hosted by git@Josephworks
