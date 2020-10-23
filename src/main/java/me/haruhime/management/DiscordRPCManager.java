@@ -15,11 +15,6 @@ public class DiscordRPCManager {
         DiscordRPC.discordInitialize(Mirror.getDiscordAppID(), handlers, true);
     }
 
-    public static void clientPresClient() {
-        DiscordRichPresence rich = new DiscordRichPresence.Builder("Mirror Client Base").setBigImage("harusad", "Created by Haruhime").build();
-        DiscordRPC.discordUpdatePresence(rich);
-    }
-
     public static void clientPresMultiPlayer() {
         DiscordRichPresence rich = new DiscordRichPresence.Builder(mc.getCurrentServerData().serverIP).setDetails("Currently Playing On:").setBigImage("harusad", "Created by Haruhime").build();
         DiscordRPC.discordUpdatePresence(rich);

@@ -50,7 +50,6 @@ public class Mirror {
 
         if (discordRPCOnStartup && discordRPCEnabled)
             DiscordRPCManager.drpcInit();
-            DiscordRPCManager.clientPresClient();
     }
 
     // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
@@ -66,7 +65,7 @@ public class Mirror {
         }
         if (k == Keyboard.KEY_ESCAPE && HUD.drawingHUD)
             HUD.setDrawingHUD(false);
-        
+
     }
 
     @SubscribeEvent
