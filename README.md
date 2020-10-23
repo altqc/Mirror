@@ -19,7 +19,7 @@ Not ready for usage!
 # Mirror Client Base
 clean open source 1.8.9 forge ghost client base  
 free to use, sell, ect... (MIT Lisence)    
-no support will be given with making modules, although feel free to dm me about base stuff [iTrqPss#8258](http://discordapp.com/users/359833743906832385)
+no support will be given with making modules, although feel free to dm me about base stuff @[iTrqPss#8258](http://discordapp.com/users/359833743906832385)
   
 ## Development Enviroment  
 Dev envro is currently a grade project being edited with Intelij sourced from the forge 1.8.9 MDK  
@@ -55,9 +55,11 @@ A guide on setting up your own auth server will be written in the future.
   
 ## Contributing  
 All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 & me.haruhime.utils.ColorUtils atm).  
-If looking to contribute to this project dm me  [iTrqPss#8258](http://discordapp.com/users/359833743906832385)  
+If looking to contribute to this project dm me @[iTrqPss#8258](http://discordapp.com/users/359833743906832385)  
 If you do not dm me first, I will deny all forks.  
+There will not be a Discord server made for this as it is not only unnecessary but also I rather not put any of my accounts at risk of termination.
   
 ## Bugs  
 There is bound to be bugs in this base, if you notice one open an issue.  
 Some bugs I simply can not fix, these can be left to other contributers and client developers.  
+You can also report buts by dming me @[iTrqPss#8258](http://discordapp.com/users/359833743906832385)
