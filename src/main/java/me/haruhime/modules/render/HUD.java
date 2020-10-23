@@ -3,12 +3,16 @@ package me.haruhime.modules.render;
 import me.haruhime.Mirror;
 import me.haruhime.management.ModuleManager;
 import me.haruhime.modules.Module;
+import me.haruhime.utils.ColourUtils;
+import me.haruhime.utils.RenderUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.input.Keyboard;
 
+import java.awt.*;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -38,6 +42,9 @@ public class HUD extends Module {
         GlStateManager.scale(0.5, 0.5, 1);
         GlStateManager.translate(-4, -4, 0);
 
+        Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4) + 1, sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4) + 1, sr.getScaledWidth() / 2 + 1, sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4) + 1, ColourUtils.rainbow(1000, 25.0).getRGB());
+        Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4), sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4), sr.getScaledWidth() / 2 , sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4), new Color(28, 28, 28).getRGB());
+
         int count = 0;
         String displayName;
 
@@ -61,6 +68,10 @@ public class HUD extends Module {
             count++;
         }
 
+    }
+
+    public static void setDrawingHUD(Boolean bool){
+        drawingHUD = bool;
     }
 
     @Override

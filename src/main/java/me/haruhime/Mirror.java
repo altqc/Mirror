@@ -4,10 +4,13 @@ import me.haruhime.events.EventType;
 import me.haruhime.events.listeners.EventUpdate;
 import me.haruhime.management.DiscordRPCManager;
 import me.haruhime.management.ModuleManager;
+import me.haruhime.modules.Module;
 import me.haruhime.modules.render.HUD;
 import me.haruhime.wrappers.Wrapper;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiDisconnected;
 import net.minecraft.client.gui.GuiMainMenu;
+import net.minecraft.client.gui.GuiOptions;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,6 +22,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
+
+import static me.haruhime.management.ModuleManager.modules;
 
 // Misc forge mod information, defined below
 @Mod(name = Mirror.NAME, modid = Mirror.MODID, version = Mirror.VERSION)
@@ -59,6 +64,9 @@ public class Mirror {
         } else {
             c++;
         }
+        if (k == Keyboard.KEY_ESCAPE && HUD.drawingHUD)
+            HUD.setDrawingHUD(false);
+        
     }
 
     @SubscribeEvent
@@ -95,10 +103,15 @@ public class Mirror {
     }
 
     @SubscribeEvent
-    public void onMainMenuOpen(GuiScreenEvent.InitGuiEvent event) {
+    public void onGuiOpen(GuiScreenEvent.InitGuiEvent event) {
         if (Minecraft.getMinecraft().currentScreen instanceof GuiMainMenu) {
             if (discordRPCEnabled)
                 DiscordRPCManager.clientInMenus();
+            if(HUD.drawingHUD)
+                HUD.setDrawingHUD(false);
+        } else if(Minecraft.getMinecraft().currentScreen instanceof GuiDisconnected) {
+            if (HUD.drawingHUD)
+                HUD.setDrawingHUD(false);
         }
     }
 

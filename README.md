@@ -18,7 +18,7 @@ The current event system is very basic and is handled by forge events.
 The three current events are `PreMotion`, `PostMotion`, and `OnClick`  
     
 ## Features  
-The finished Mirror project will include a module base, event base, commands, a few modules, a gui and more.  
+The finished Mirror project will include a module base, event base, commands, a few modules, a me.haruhime.gui and more.  
 Many features will be able to be changed and customized in me.haruhime.Mirror  
 
 ## Customization  
