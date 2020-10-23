@@ -5,6 +5,7 @@ import me.haruhime.events.listeners.EventUpdate;
 import me.haruhime.management.DiscordRPCManager;
 import me.haruhime.management.ModuleManager;
 import me.haruhime.modules.render.HUD;
+import me.haruhime.wrappers.Wrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,12 +20,21 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
 
+// Misc forge mod information, defined below
 @Mod(name = Mirror.NAME, modid = Mirror.MODID, version = Mirror.VERSION)
 public class Mirror {
+    // Forge Mod
     public static final String NAME = "Mirror Client Base", MODID = "mirror", VERSION = "1.0";
+    // Discord Rich Presence Integration
     private static final Boolean discordRPCOnStartup = true, discordRPCEnabled = true;
+    // The client
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
+
+    // CLient Stuff
     double c = 0;
+    private static Wrapper wrapper = new Wrapper();
+
+    // Initialization of the forge mod (client hook)
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -35,8 +45,10 @@ public class Mirror {
 
         if (discordRPCOnStartup && discordRPCEnabled)
             DiscordRPCManager.drpcInit();
-        DiscordRPCManager.clientPresClient();
+            DiscordRPCManager.clientPresClient();
     }
+
+    // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {
@@ -47,6 +59,13 @@ public class Mirror {
         } else {
             c++;
         }
+    }
+
+    @SubscribeEvent
+    public void onClickInput(InputEvent.MouseInputEvent event){
+        EventUpdate e = new EventUpdate();
+        e.setType(EventType.ONCLICK);
+        ModuleManager.onEvent(e);
     }
 
     @SubscribeEvent
@@ -82,6 +101,8 @@ public class Mirror {
                 DiscordRPCManager.clientInMenus();
         }
     }
+
+    // Getters and Setters for modular and dynamic client information
 
     public static String getClientName() {
         return clientName;

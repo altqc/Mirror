@@ -44,6 +44,13 @@ public class Event<T> {
         return type == EventType.POST;
     }
 
+    public boolean isClick() {
+        if (type == null)
+            return false;
+
+        return type == EventType.ONCLICK;
+    }
+
     public boolean isIncoming() {
         if (direction == null)
             return false;
