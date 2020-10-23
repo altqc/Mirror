@@ -1,7 +1,12 @@
 # Mirror
-clean open source forge ghost client base  
+clean open source 1.8.9 forge ghost client base  
 free to use, sell, ect... (MIT Lisence)    
 no support will be given with making modules, although feel free to dm me about base stuff [iTrqPss#8258](http://discordapp.com/users/359833743906832385)
+  
+## Development Enviroment  
+Dev envro is currently a grade project being edited with Intelij sourced from the forge 1.8.9 MDK  
+This is setup to be used with Intelij or Eclipse  
+No support will be given with setting up your own dev envro  
   
 ## Usage  
 Anyone may use this base, but the documentation will be limited to basic module creation.  
