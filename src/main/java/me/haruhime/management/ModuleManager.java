@@ -10,6 +10,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ModuleManager {
 
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
+    public static CopyOnWriteArrayList<Module> getModules() {
+        return ModuleManager.modules;
+    }
 
     public static void initModules() {
         modules.add(new HUD());
@@ -34,7 +37,4 @@ public class ModuleManager {
         }
     }
 
-    public static CopyOnWriteArrayList<Module> getModules() {
-        return ModuleManager.modules;
-    }
 }
