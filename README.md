@@ -2,7 +2,12 @@
 Not ready for usage!  
   
 ## To Do:  
-  - Click Gui
+  - Click Gui w/ themes
+    - skeet
+    - weebware
+    - otv3
+    - astolfo
+    - mirror
   - Fix gui client render bug
   - Basic AutoClicker
   - Basic ESPs
