@@ -47,7 +47,7 @@ public class HUD extends Module {
             if (!m.visible)
                 continue;
 
-            if (m.falseName == "null") {
+            if (m.falseName.equals("null")) {
                 displayName = m.name;
             } else {
                 displayName = m.falseName;
@@ -81,13 +81,13 @@ public class HUD extends Module {
             String toCompare;
             String toCompare1;
 
-            if (arg0.falseName == "null") {
+            if (arg0.falseName.equals("null")) {
                 toCompare = arg0.name;
             } else {
                 toCompare = arg0.falseName;
             }
 
-            if (arg1.falseName == "null") {
+            if (arg1.falseName.equals("null")) {
                 toCompare1 = arg1.name;
             } else {
                 toCompare1 = arg1.falseName;
