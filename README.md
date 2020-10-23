@@ -8,6 +8,10 @@ Anyone may use this base, but the documentation will be limited to basic module 
 This base is not meant for learning or for skids, this base is meant for semi-experienced to very-experienced module developers.  
 Undetectability and self-destructing is not included, you must make your closet cheat act as one yourself.  
   
+## Events
+The current event system is very basic and is handled by forge events.  
+The three current events are `PreMotion`, `PostMotion`, and `OnClick`  
+    
 ## Features  
 The finished Mirror project will include a module base, event base, commands, a few modules, a gui and more.  
 Many features will be able to be changed and customized in me.haruhime.Mirror  
