@@ -1,5 +1,5 @@
 # Status  
-Not ready for usage!  
+Currently unusable; complete development and testing stages.
   
 ## To Do:  
   - Click Gui w/ themes
