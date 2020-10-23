@@ -1,7 +1,7 @@
 # Status  
 Not ready for usage!  
   
-# Mirror
+# Mirror Client Base
 clean open source 1.8.9 forge ghost client base  
 free to use, sell, ect... (MIT Lisence)    
 no support will be given with making modules, although feel free to dm me about base stuff [iTrqPss#8258](http://discordapp.com/users/359833743906832385)
