@@ -1,7 +1,7 @@
 # Mirror
 clean open source forge ghost client base  
 free to use, sell, ect... (MIT Lisence)    
-no support will be given with making modules, although feel free to dm me about base stuff `iTrqPs#8258`
+no support will be given with making modules, although feel free to dm me about base stuff [iTrqPss#8258](http://discordapp.com/users/359833743906832385)
   
 ## Usage  
 Anyone may use this base, but the documentation will be limited to basic module creation.  
@@ -29,3 +29,8 @@ A list of dependancies will be present later on.
 The project will include authentication utils but not methods to use them, you must write these yourself.  
 The provided utils are basic HWID to MD5 hash getters.  
 A guide on setting up your own auth server will be written in the future.  
+  
+## Contributing  
+All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 atm).  
+If looking to contribute to this project dm me  [iTrqPss#8258](http://discordapp.com/users/359833743906832385)  
+If you do not dm me first, I will deny all forks.  
