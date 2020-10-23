@@ -14,6 +14,8 @@ Not ready for usage!
   - Gamma FullBright
   - Command System
   - Account Manager
+  - Settings Manager
+  - Config System
     
   
 # Mirror Client Base
