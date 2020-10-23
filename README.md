@@ -1,5 +1,14 @@
 # Status  
 Not ready for usage!  
+To Do:  
+  - Click Gui
+  - Fix gui client render bug
+  - Basic AutoClicker
+  - Basic ESPs
+  - Gamma FullBright
+  - Command System
+  - Account Manager
+    
   
 # Mirror Client Base
 clean open source 1.8.9 forge ghost client base  
