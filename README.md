@@ -1,6 +1,6 @@
 # Mirror
 clean open source forge ghost client base  
-free to use, sell, ect..  
+free to use, sell, ect... (MIT Lisence)    
 no support will be given with making modules, although feel free to dm me about base stuff `iTrqPs#8258`
   
 ## Usage  
