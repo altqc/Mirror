@@ -1,0 +1,9 @@
+# everything...
+/*
+/*/
+
+# but the source and the gitignore file
+!/src
+!/src/
+!/.gitignore
+!/build.gradle
