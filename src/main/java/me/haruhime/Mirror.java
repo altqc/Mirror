@@ -26,38 +26,6 @@ public class Mirror {
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
     double c = 0;
 
-    public static String getClientName() {
-        return clientName;
-    }
-
-    public static void setClientName(String str) {
-        Mirror.clientName = str;
-    }
-
-    public static String getClientVersion() {
-        return clientVersion;
-    }
-
-    public static void setClientVersion(String str) {
-        Mirror.clientVersion = str;
-    }
-
-    public static String getClientAuthor() {
-        return clientAuthor;
-    }
-
-    public static void setClientAuthor(String str) {
-        Mirror.clientAuthor = str;
-    }
-
-    public static String getDiscordAppID() {
-        return discordAppID;
-    }
-
-    public static void setDiscordAppID(String str) {
-        Mirror.discordAppID = discordAppID;
-    }
-
     @EventHandler
     public void init(FMLInitializationEvent event) {
         System.out.println(Mirror.getClientName() + " | " + Mirror.getClientVersion() + " Started");
@@ -113,6 +81,38 @@ public class Mirror {
             if (discordRPCEnabled)
                 DiscordRPCManager.clientInMenus();
         }
+    }
+
+    public static String getClientName() {
+        return clientName;
+    }
+
+    public static void setClientName(String str) {
+        Mirror.clientName = str;
+    }
+
+    public static String getClientVersion() {
+        return clientVersion;
+    }
+
+    public static void setClientVersion(String str) {
+        Mirror.clientVersion = str;
+    }
+
+    public static String getClientAuthor() {
+        return clientAuthor;
+    }
+
+    public static void setClientAuthor(String str) {
+        Mirror.clientAuthor = str;
+    }
+
+    public static String getDiscordAppID() {
+        return discordAppID;
+    }
+
+    public static void setDiscordAppID(String str) {
+        Mirror.discordAppID = discordAppID;
     }
 
 }
