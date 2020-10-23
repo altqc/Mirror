@@ -1,8 +1,11 @@
 package me.haruhime.modules;
 
 import me.haruhime.events.Event;
+import me.haruhime.wrappers.Wrapper;
 
 public class Module {
+
+    public static final Wrapper wrapper = new Wrapper();
 
     public String name, falseName, desc;
     public boolean toggled, visible;

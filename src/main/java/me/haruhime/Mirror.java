@@ -4,13 +4,11 @@ import me.haruhime.events.EventType;
 import me.haruhime.events.listeners.EventUpdate;
 import me.haruhime.management.DiscordRPCManager;
 import me.haruhime.management.ModuleManager;
-import me.haruhime.modules.Module;
 import me.haruhime.modules.render.HUD;
 import me.haruhime.wrappers.Wrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiDisconnected;
 import net.minecraft.client.gui.GuiMainMenu;
-import net.minecraft.client.gui.GuiOptions;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,8 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
-
-import static me.haruhime.management.ModuleManager.modules;
+import org.lwjgl.input.Mouse;
 
 // Misc forge mod information, defined below
 @Mod(name = Mirror.NAME, modid = Mirror.MODID, version = Mirror.VERSION)
@@ -50,6 +47,9 @@ public class Mirror {
 
         if (discordRPCOnStartup && discordRPCEnabled)
             DiscordRPCManager.drpcInit();
+
+        Minecraft.getMinecraft().gameSettings.gammaSetting = 0;
+        Minecraft.getMinecraft().gameSettings.guiScale = 2;
     }
 
     // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
@@ -70,16 +70,17 @@ public class Mirror {
 
     @SubscribeEvent
     public void onClickInput(InputEvent.MouseInputEvent event){
-        EventUpdate e = new EventUpdate();
-        e.setType(EventType.ONCLICK);
-        ModuleManager.onEvent(e);
+        if (!Mouse.getEventButtonState()) {
+            return;
+        }
+
     }
 
     @SubscribeEvent
     public void onRenderTick(TickEvent.RenderTickEvent event) {
-        if (HUD.drawingHUD) {
+        if (HUD.drawingHUD)
             HUD.draw();
-        }
+
     }
 
     @SubscribeEvent

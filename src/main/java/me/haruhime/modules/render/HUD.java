@@ -42,8 +42,8 @@ public class HUD extends Module {
         GlStateManager.scale(0.5, 0.5, 1);
         GlStateManager.translate(-4, -4, 0);
 
-        Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4) + 1, sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4) + 1, sr.getScaledWidth() / 2 + 1, sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4) + 1, ColourUtils.rainbow(1000, 25.0).getRGB());
-        Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4), sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4), sr.getScaledWidth() / 2 , sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4), new Color(28, 28, 28).getRGB());
+        // Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4) + 1, sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4) + 1, sr.getScaledWidth() / 2 + 1, sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4) + 1, ColourUtils.rainbow(1000, 25.0).getRGB());
+        // Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4), sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4), sr.getScaledWidth() / 2 , sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4), new Color(28, 28, 28).getRGB());
 
         int count = 0;
         String displayName;
@@ -63,7 +63,7 @@ public class HUD extends Module {
             double d = count * (fr.FONT_HEIGHT + 4);
             int offset0 = (int) d;
 
-            fr.drawString(displayName, sr.getScaledWidth() - fr.getStringWidth(displayName) - 4, 4 + offset0, -1);
+            fr.drawString(displayName, sr.getScaledWidth() - fr.getStringWidth(displayName) - 4, 4 + offset0, ColourUtils.rainbow(1000, 25.0).getRGB());
 
             count++;
         }
@@ -71,7 +71,8 @@ public class HUD extends Module {
     }
 
     public static void setDrawingHUD(Boolean bool){
-        drawingHUD = bool;
+        HUD.drawingHUD = false;
+
     }
 
     @Override
