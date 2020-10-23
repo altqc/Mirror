@@ -18,7 +18,7 @@ Most cusomization options can even be fully disabled for a minimalist client.
 Things such as Discord RPC have several presets but you can also always make your own.
 
 ## Dependancies  
-While you may edit the build.gradle, the one provided has needed dependancies hosted by @josephworks  
+While you may edit the build.gradle, the one provided has needed dependancies hosted by [@josephworks](https://github.com/josephworks)  
 A list of dependancies will be present later on.  
 
 ## Authentication Utils   
