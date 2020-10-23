@@ -11,7 +11,6 @@ Currently unusable; complete development and testing stages.
   - Fix gui client render bug
   - Basic AutoClicker
   - Basic ESPs
-  - Gamma FullBright
   - Command System
   - Account Manager
   - Settings Manager
