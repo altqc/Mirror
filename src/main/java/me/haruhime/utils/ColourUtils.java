@@ -4,6 +4,8 @@ import java.awt.*;
 
 public class ColourUtils {
 
+    // provided by josephwarks
+
     public static Color astolfo(int index, int speed, float saturation, float brightness, float opacity) {
         int angle = (int) ((System.currentTimeMillis() / speed + index) % 360);
         angle = (angle > 180 ? 360 - angle : angle) + 180;
@@ -13,6 +15,8 @@ public class ColourUtils {
         Color obj = new Color(color);
         return new Color(obj.getRed(), obj.getGreen(), obj.getBlue(), Math.max(0, Math.min(255, (int) (opacity * 255))));
     }
+
+    // provided by josephworks
 
     public static Color rainbow(int index, double speed) {
         int angle = (int) ((System.currentTimeMillis() / speed + index) % 360);
