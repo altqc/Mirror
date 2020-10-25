@@ -57,7 +57,7 @@ The provided utils are basic HWID to MD5 hash getters.
 A basic concept guide written by me may be viewed [here](https://gist.github.com/Trapss/962c3989d362d07a2cefc57de128ac04).  
   
 ## Contributing  
-All code is either written by me, or if stated otherwise taken from open source projects (Just me.haruhime.utils.AuthUtils.md5 & me.haruhime.utils.ColorUtils atm).  
+All code is either written by me, or if stated otherwise taken from open source projects.  
 If looking to contribute to this project dm me @[iTrqPss#8258](http://discordapp.com/users/359833743906832385)  
 If you do not dm me first, I will deny all forks.  
 There will not be a Discord server made for this as it is not only unnecessary but also I rather not put any of my accounts at risk of termination.
