@@ -29,19 +29,17 @@ public class Mirror {
     public static final String NAME = "Mirror Client Base", MODID = "mirror", VERSION = "1.0";
     // Discord Rich Presence Integration
     private static final Boolean discordRPCOnStartup = true, discordRPCEnabled = true;
+    private static final Wrapper wrapper = new Wrapper();
     // The client
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
-    private static final Wrapper wrapper = new Wrapper();
     // CLient Stuff
     double c = 0;
 
-    // Initialization of the forge mod (client hook)
 
+    // Getters and Setters for modular and dynamic client information
     public static String getClientName() {
         return clientName;
     }
-
-    // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
 
     public static void setClientName(String str) {
         Mirror.clientName = str;
@@ -67,11 +65,11 @@ public class Mirror {
         return discordAppID;
     }
 
-    // Getters and Setters for modular and dynamic client information
-
     public static void setDiscordAppID(String str) {
         Mirror.discordAppID = discordAppID;
     }
+
+    // Initialization of the forge mod (client hook)
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -86,6 +84,8 @@ public class Mirror {
         Minecraft.getMinecraft().gameSettings.gammaSetting = 0;
         Minecraft.getMinecraft().gameSettings.guiScale = 2;
     }
+
+    // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {
