@@ -39,6 +39,7 @@ public class HUD extends Module {
         GlStateManager.scale(0.5, 0.5, 1);
         GlStateManager.translate(-4, -4, 0);
 
+        // gui testing stuff idk
         // Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4) + 1, sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4) + 1, sr.getScaledWidth() / 2 + 1, sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4) + 1, ColourUtils.rainbow(1000, 25.0).getRGB());
         // Gui.drawRect(sr.getScaledWidth() / 2 - (sr.getScaledWidth() / 4), sr.getScaledHeight() / 2 + (sr.getScaledHeight() / 4), sr.getScaledWidth() / 2 , sr.getScaledHeight() / 2 - (sr.getScaledHeight() / 4), new Color(28, 28, 28).getRGB());
 
@@ -82,6 +83,8 @@ public class HUD extends Module {
         drawingHUD = false;
     }
 
+
+    // the balli method
     public static class ModuleComparator implements Comparator<Module> {
 
         @Override
