@@ -31,6 +31,7 @@ No support will be given with setting up your own development envro
 Anyone may use this base, but the documentation will be limited to basic module creation.  
 This base is not meant for learning or for skids, this base is meant for semi-experienced to very-experienced module developers.  
 Undetectability and self-destructing is not included, you must make your closet cheat act as one yourself.  
+Also please keep in mind this is in no way intended to bypass screenshares, in fact, forge mods in general shouldnt be made to bypass screenshares.  
   
 ## Events
 The current event system is very basic and is handled by forge events.  
@@ -39,6 +40,7 @@ The three current events are `PreMotion`, `PostMotion`, and `OnClick`
 ## Features  
 The finished Mirror project will include a module base, event base, commands, a few modules, a me.haruhime.gui and more.  
 Many features will be able to be changed and customized in me.haruhime.Mirror  
+
 
 ## Customization  
 Mirror is fully modular and you can change it however you like! .
