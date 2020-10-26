@@ -111,7 +111,7 @@ public class Module {
     }
 
     public enum Category {
-        MOVEMENT, RENDER, MISSINGNO
+        MOVEMENT, RENDER, MISSINGNO, OTHER
     }
 
 }

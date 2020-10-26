@@ -4,6 +4,7 @@ import me.haruhime.events.EventType;
 import me.haruhime.events.listeners.EventUpdate;
 import me.haruhime.management.DiscordRPCManager;
 import me.haruhime.management.ModuleManager;
+import me.haruhime.modules.Module;
 import me.haruhime.modules.render.HUD;
 import me.haruhime.wrappers.Wrapper;
 import net.minecraft.client.Minecraft;
@@ -34,9 +35,15 @@ public class Mirror {
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
     // CLient Stuff
     double c = 0;
+    public static boolean destructed = false;
 
 
     // Getters and Setters for modular and dynamic client information
+
+    public static void setDestucted(boolean bool) { Mirror.destructed = bool; }
+
+    public static boolean getDestructed() { return destructed; }
+
     public static String getClientName() {
         return clientName;
     }
@@ -85,7 +92,25 @@ public class Mirror {
         Minecraft.getMinecraft().gameSettings.guiScale = 2;
     }
 
+    // very very basic very detectable "self destruct"
+
+    public void destructClient(){
+        MinecraftForge.EVENT_BUS.unregister(this);
+        for (Module m : ModuleManager.getModules()){
+            if(m.isEnabled())
+                m.setToggled(false);
+        }
+    }
+
+
     // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
+
+    @SubscribeEvent
+    public void onTick(TickEvent.WorldTickEvent event){
+        if (this.getDestructed()) {
+            this.destructClient();
+        }
+    }
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {

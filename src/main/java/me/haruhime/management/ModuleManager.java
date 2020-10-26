@@ -1,9 +1,9 @@
 package me.haruhime.management;
 
 import me.haruhime.events.Event;
-import me.haruhime.modules.Module;
-import me.haruhime.modules.render.Fullbright;
-import me.haruhime.modules.render.HUD;
+import me.haruhime.modules.*;
+import me.haruhime.modules.other.*;
+import me.haruhime.modules.render.*;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -18,6 +18,7 @@ public class ModuleManager {
     public static void initModules() {
         modules.add(new HUD());
         modules.add(new Fullbright());
+        modules.add(new SelfDestruct());
     }
 
     public static void keyPress(int key) {

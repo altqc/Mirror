@@ -11,6 +11,7 @@ public class Fullbright extends Module {
         super("Fullbright");
         this.setCategory(Category.RENDER);
         this.setKeyCode(Keyboard.KEY_J);
+        this.setDesc("Gamma go brrr");
     }
 
     @Override
