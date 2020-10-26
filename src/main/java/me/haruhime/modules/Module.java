@@ -2,10 +2,12 @@ package me.haruhime.modules;
 
 import me.haruhime.events.Event;
 import me.haruhime.wrappers.Wrapper;
+import net.minecraft.client.Minecraft;
 
 public class Module {
 
     public static final Wrapper wrapper = new Wrapper();
+    public static final Minecraft mc = wrapper.getMinecraft();
 
     public String name, falseName, desc;
     public boolean toggled, visible;

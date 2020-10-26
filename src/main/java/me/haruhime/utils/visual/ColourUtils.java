@@ -1,4 +1,4 @@
-package me.haruhime.utils;
+package me.haruhime.utils.visual;
 
 import java.awt.*;
 

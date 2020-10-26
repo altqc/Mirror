@@ -1,4 +1,4 @@
-package me.haruhime.utils;
+package me.haruhime.utils.time;
 
 public class TimerUtils {
 

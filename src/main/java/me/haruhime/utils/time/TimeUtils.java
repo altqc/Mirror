@@ -1,4 +1,4 @@
-package me.haruhime.utils;
+package me.haruhime.utils.time;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

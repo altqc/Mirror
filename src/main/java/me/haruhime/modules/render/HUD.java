@@ -3,7 +3,7 @@ package me.haruhime.modules.render;
 import me.haruhime.Mirror;
 import me.haruhime.management.ModuleManager;
 import me.haruhime.modules.Module;
-import me.haruhime.utils.ColourUtils;
+import me.haruhime.utils.visual.ColourUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
