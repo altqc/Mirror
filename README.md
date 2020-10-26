@@ -33,7 +33,7 @@ Also please keep in mind this is in no way intended to bypass screenshares, in f
   
 ## Events
 The current event system is very basic and is handled by forge events.  
-The three current events are `PreMotion`, `PostMotion`, and `OnClick`  
+The three current events are `PreMotion` and `PostMotion`
     
 ## Features  
 The finished Mirror project will include a module base, event base, commands, a few modules, a me.haruhime.gui and more.  
