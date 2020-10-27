@@ -1,5 +1,5 @@
 # Status  
-Currently unusable; complete development and testing stages.
+Currently unusable; complete development and testing stages. (also taking a short break to work on a different project)
   
 ## To Do:  
   - Click Gui w/ themes
