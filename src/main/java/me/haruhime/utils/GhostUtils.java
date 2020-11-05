@@ -12,24 +12,17 @@ public class GhostUtils {
 
     private int leftClickCounter;
 
-    public void clickMouse()
-    {
-        if (leftClickCounter <= 0)
-        {
+    public void clickMouse() {
+        if (leftClickCounter <= 0) {
             mc.thePlayer.swingItem();
 
-            if (mc.objectMouseOver == null)
-            {
+            if (mc.objectMouseOver == null) {
 
-                if (mc.playerController.isNotCreative())
-                {
+                if (mc.playerController.isNotCreative()) {
                     leftClickCounter = 10;
                 }
-            }
-            else
-            {
-                switch (mc.objectMouseOver.typeOfHit)
-                {
+            } else {
+                switch (mc.objectMouseOver.typeOfHit) {
                     case ENTITY:
                         mc.playerController.attackEntity(mc.thePlayer, mc.objectMouseOver.entityHit);
                         break;
@@ -37,16 +30,14 @@ public class GhostUtils {
                     case BLOCK:
                         BlockPos blockpos = mc.objectMouseOver.getBlockPos();
 
-                        if (mc.theWorld.getBlockState(blockpos).getBlock().getMaterial() != Material.air)
-                        {
+                        if (mc.theWorld.getBlockState(blockpos).getBlock().getMaterial() != Material.air) {
                             mc.playerController.clickBlock(blockpos, mc.objectMouseOver.sideHit);
                             break;
                         }
 
                     case MISS:
                     default:
-                        if (mc.playerController.isNotCreative())
-                        {
+                        if (mc.playerController.isNotCreative()) {
                             leftClickCounter = 10;
                         }
                 }

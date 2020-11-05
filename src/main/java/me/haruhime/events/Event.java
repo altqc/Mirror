@@ -34,7 +34,4 @@ public class Event<T> {
 
         return type == EventType.POST;
     }
-
-
-
 }

@@ -31,18 +31,21 @@ public class Mirror {
     // Discord Rich Presence Integration
     private static final Boolean discordRPCOnStartup = true, discordRPCEnabled = true;
     private static final Wrapper wrapper = new Wrapper();
+    public static boolean destructed = false;
     // The client
     private static String clientName = "Mirror", clientVersion = "b1", clientAuthor = "iTrqPss", discordAppID = "500703204137500715";
-    // CLient Stuff
+    // Client Stuff
     double c = 0;
-    public static boolean destructed = false;
-
 
     // Getters and Setters for modular and dynamic client information
 
-    public static void setDestucted(boolean bool) { Mirror.destructed = bool; }
+    public static void setDestucted(boolean bool) {
+        Mirror.destructed = bool;
+    }
 
-    public static boolean getDestructed() { return destructed; }
+    public static boolean getDestructed() {
+        return destructed;
+    }
 
     public static String getClientName() {
         return clientName;
@@ -94,10 +97,10 @@ public class Mirror {
 
     // very very basic very detectable "self destruct"
 
-    public void destructClient(){
+    public void destructClient() {
         MinecraftForge.EVENT_BUS.unregister(this);
-        for (Module m : ModuleManager.getModules()){
-            if(m.isEnabled())
+        for (Module m : ModuleManager.getModules()) {
+            if (m.isEnabled())
                 m.setToggled(false);
         }
     }
@@ -106,8 +109,8 @@ public class Mirror {
     // Forge events to handle key inputs, rendering, ticks, Discord RPC, ect...
 
     @SubscribeEvent
-    public void onTick(TickEvent.WorldTickEvent event){
-        if (this.getDestructed()) {
+    public void onTick(TickEvent.WorldTickEvent event) {
+        if (getDestructed()) {
             this.destructClient();
         }
     }
@@ -172,5 +175,4 @@ public class Mirror {
                 HUD.setDrawingHUD(false);
         }
     }
-
 }
