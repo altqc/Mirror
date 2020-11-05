@@ -41,7 +41,7 @@ repositories {
     mavenCentral()
     maven {
         name = "josephworks"
-        url = "http://josephworks.net:8081/repository/maven-releases"
+        url = "http://repo.josephworks.net/repository/maven-releases"
     }
 }
 
